@@ -1,0 +1,18 @@
+services:
+  kindle-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kindle-dashboard
+    restart: unless-stopped
+    ports:
+      - "8081:8080"
+    volumes:
+      - /mnt/data/Kindle_project/output:/output
+    environment:
+      - TZ=America/Sao_Paulo
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  kindle_dashboard_output:
