@@ -1,7 +1,7 @@
 # kindle-dashboard
 
-# 📖  Kindle Dashboard Paperwhite Edition
-Um dashboard digital otimizado para a tela E-ink da **Amazon Kindle Paper White (11ª geração)**. Exibe relógio, data, clima em tempo real e status de serviços do homelab (caso você tenha um e queira exibir o status), com atualização automática a cada minuto via API HTTP.
+# 📖  Kindle Dashboard Paperwhite (Docker Edition)
+Um dashboard digital otimizado para a tela E-ink da **Amazon Kindle Paper White (11ª geração)**. Exibe relógio, data, clima em tempo real e status de serviços do homelab (caso você tenha um e queira exibir o status), com atualização automática a cada minuto via API HTTP em um container docker. Perfeito para quem tem um homelab ou servidor dedicado a serviços.
 
 ![Imagem Atômica do Kindle dashboard](kindle-dashboard.png)
 
@@ -19,8 +19,8 @@ Um dashboard digital otimizado para a tela E-ink da **Amazon Kindle Paper White 
 ## 🛠 Instalação e Execução
 1. Clone o repositório:
 ```sh
-   git clone https://github.com/OverloadMX/dashboard_kindle.git
-   cd dashboard_kindle
+   git clone https://github.com/OverloadMX/kindle_dashboard.git
+   cd kindle_dashboard
 ```
 2. Instale Docker e Docker Compose (v2+).
 3. Rode o serviço com compose:
@@ -29,7 +29,7 @@ Um dashboard digital otimizado para a tela E-ink da **Amazon Kindle Paper White 
 ```
 4. No script `dashboard.sh, configure uma **URL de leitura** (ou use um app que suporte URL fixa). A URL serve para testar se o container está funcionando:
 ```
-   http://<IP_DO_CONTÊNER>:8081/kindle-dashboard.png?battery=XX
+   http://<IP_DO_CONTAINER>:8081/kindle-dashboard.png?battery=XX
 ```
 > `XX` deve ser o valor atual da bateria do Kindle. O servidor captará esse valor e gravará no disco para exibir no próximo frame.
 
