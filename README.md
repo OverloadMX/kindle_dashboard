@@ -27,7 +27,7 @@ Um dashboard digital otimizado para a tela E-ink da **Amazon Kindle Paper White 
 ```sh
    docker compose up --build
 ```
-4. No script `dashboard.sh, configure uma **URL de leitura** (ou use um app que suporte URL fixa). A URL serve para testar se o container está funcionando:
+4. No script `dashboard.sh, configure a **URL de leitura** a seguir. A URL serve para testar se o container está funcionando através de um navegador:
 ```
    http://<IP_DO_CONTAINER>:8081/kindle-dashboard.png?battery=XX
 ```
